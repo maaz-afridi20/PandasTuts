@@ -33,3 +33,43 @@ tu wo jo new data ka column banega uss mein ajaye ga.
 
 data must of b same length. warna error aye. ga
 """
+
+
+# if we want to load some minimum data like k kuch conditions
+# laga kar minimun data ley ayein tu hm ye b kr sktay hain...
+# like
+"""
+tu uss k liye humein same logic banani hogi k aik new variable create krna hoga.
+qk agar new daat chahiyee tu kahin prr tu show hoga.
+
+tu agar koii thora data chahiyee matlab k km data chahiyee tu hm wohi
+slicing ko use karengay jaisay k list mein use ki thii..
+like given belos.
+
+var['min data'] = var['a'][:2]
+tu ab ye jo haii ye aik new column banayee ga.. named 'min data'
+uss mein jo a column ka data wo sara copy kr lega magar siraf 0 index say lekar 2 tk
+"""
+
+var = pd.DataFrame({"a":[1,2,3,4,5],"b":[9,6,7,8,10]})
+var['min data'] = var['a'][:3]
+print(var)
+
+# deleting data...
+
+
+"""
+there is 2 methods of deleting data...
+pop keyword : var.pop("b") this will delete column b 
+del keyword : del var['a'] this will delete column a
+with the help of pop we can delete any data.
+so in pop we have to give the name of the column which we want to delete.
+like in this we had given the name of column 'b' so this will delete 'b'
+"""
+
+var.pop("b")
+print(var)
+
+del var['a']
+print(var)
+
