@@ -26,6 +26,24 @@ data.to_numpy() => will change dataframe to numpy array
 data.sort_index(axis=0, ascending=False)  => will sort data in descending order
                                              we also have to mention axis which mean that which we want to
                                              like row or column in descending order.
+data["is_canceled"][5] = 1  => this will change the data in column "is_canceled"
+                               and the index 5, value to 1
+what type of data is inside "is_canceled" and index5 that value will be changed to 1 or anything
+we want like
+data["is_canceled"][5] = "fuckkkkk"
+
+there is another method for this
+data.loc[0,"columnName"] = "maaz"  => now this will also change value of 0 index and any specific name
+                                      of column to any value we want... like eg below.
+data.loc[0,"lead_time"] = 88
+
+
+data.loc[[1,2],["is_canceled","lead_time"]] => this will only give the 1st and 2nd row and only the specific
+                                               two mentioned columns.
+
+
+data.drop(rowName_or_columnName, axis) => this will delete that row or column which we spcify.
+data.drop("is_canceled", axis=1) => this will delete is_canceled column.
 
 """
 import pandas as pd
@@ -33,6 +51,7 @@ import pandas as pd
 data = pd.read_csv("D:\\assets\\kaggledatasets\\csv_of_that_zip_files\\hotel_booking.csv",nrows=20, usecols=[0,1,2,3,4,5])
 print(data)
 
+data.loc[0,"lead_time"] = 88
 
 """
 we can change data frame from data frame to simple array.
