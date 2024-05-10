@@ -51,7 +51,7 @@ import pandas as pd
 data = pd.read_csv("D:\\assets\\kaggledatasets\\csv_of_that_zip_files\\hotel_booking.csv",nrows=20, usecols=[0,1,2,3,4,5])
 print(data)
 
-data.loc[0,"lead_time"] = 88
+data.loc[0, "lead_time"] = 88
 
 """
 we can change data frame from data frame to simple array.
