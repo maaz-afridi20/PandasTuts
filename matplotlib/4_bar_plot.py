@@ -34,8 +34,8 @@ plt.bar(x,y, label="abccc") ye label aik chota sa label hoga ye graph k jo stick
                             plt.legend() ye jab hm type kr lengay phirr ye show ho jaye ga. 
 
 
+                            
 we can show multiple bar graph in single chart like 
-
 
 
 for horizontal bar graphs.
